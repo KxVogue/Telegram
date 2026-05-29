@@ -1,0 +1,13 @@
+{
+    "functions": {
+        "api/bot.js": {
+            "maxDuration": 10
+        }
+    },
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/api/bot"
+        }
+    ]
+}
