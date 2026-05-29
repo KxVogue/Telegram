@@ -1,16 +1,12 @@
-File Name: package.json
-
 {
-  "name": "tiktok-telegram-scraper",
+  "name": "teletiktok",
   "version": "1.0.0",
-  "description": "Telegram bot to scrape and send TikTok videos",
-  "main": "tiktok_scraper_telegram.js",
+  "type": "module",
   "scripts": {
-    "start": "node tiktok_scraper_telegram.js"
+    "build": "echo 'Build complete'"
   },
   "dependencies": {
-    "axios": "^1.6.0",
-    "node-cron": "^3.0.0",
-    "node-telegram-bot-api": "^0.64.0"
+    "@netlify/functions": "^2.0.0",
+    "axios": "^1.6.0"
   }
 }
