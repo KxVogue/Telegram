@@ -5,8 +5,10 @@ const CHAT_ID = '8881529092';
 const RAPIDAPI_KEY = '4cd80b1366msh9918c7a2780a5bep11e5bbjsn3620f2094de1';
 
 async function sendMessage(chatId, text) {
-  const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
-  await axios.post(url, { chat_id: chatId, text });
+  await axios.post(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+    chat_id: chatId,
+    text
+  });
 }
 
 async function sendVideo(chatId, buffer, caption) {
@@ -60,7 +62,12 @@ module.exports = async (req, res) => {
   const text = message.text || '';
   const chatId = message.chat.id;
   if (text === '/start') {
-    const keyboard = { reply_markup: { keyboard: [['Scrappe']], resize_keyboard: true } };
+    const keyboard = {
+      reply_markup: {
+        keyboard: [['Scrappe']],
+        resize_keyboard: true
+      }
+    };
     await axios.post(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
       chat_id: chatId,
       text: 'Click Scrappe button to manually scrape TikTok videos now.',
