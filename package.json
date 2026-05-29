@@ -1,7 +1,7 @@
 {
   "name": "teletiktok",
   "version": "1.0.0",
-  "main": "api/bot.js",
+  "main": "api/index.js",
   "scripts": {
     "build": "echo 'Build complete'"
   },
